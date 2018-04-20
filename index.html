@@ -4,7 +4,7 @@
 <title>OnlyMx13 Main Page</title>
 <style>
 .link-button {
-background-color:#3030ff;
+background-color:#0000ff;
 height:100%;
 width:auto;
 padding:10px 5px;
@@ -14,16 +14,37 @@ border-radius:5px;
 box-shadow:         inset 0 0 3px #000000;
 cursor: pointer;
 }
+body{
+background-color:#000060;  
+}
+#game-wrapper{
+width:100%;
+height:500px;
+}
 </style>
+<script>
+function main() {
+  var div=document.getElementById('game-wrapper');
+  //top right bottom left
+  var x = 10;
+  var y = 10;
+  div.style.padding = (div.height-y)+'px '+(div.width-x)+'px '+y+'px '+x+'px'
+}
+</script>
 </head>
-<body>
+<body onload='main()'>
 <div id="top-wrapper" height='80px' width='100%' style='background-color:blue'>
 <a href="https://onlymx13.github.io/cesium-color-helper">
 <button id='cesium-color-helper' class='link-button'>Cesium Color Helper</button></a>
 <a href="https://onlymx13.github.io/natural-language-maker">
 <button id='natural-language-maker' class='link-button'>Natural Language Maker</button></a>
+<a href="https://onlymx13.github.io/enus-engb">
+<button id='enus-engb' class='link-button'>EN-US to EN-GB</button></a>
 </div>
 <h1>OnlyMx13 Main Page</h1>
 <div width='200px' align='center'><p>Welcome to the main page for OnlyMx13, also known as MMMMMMMMMMMMM. Click the links above to see my various projects. I enjoy TI-BASIC and JavaScript coding.</p></div>
+<div id='game-wrapper'>
+<img id='img' src='img.png' height='20px' width='20px'></img>
+</div>
 </body>
 </html>
